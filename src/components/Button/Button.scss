@@ -1,0 +1,32 @@
+.Button {
+  background: orange;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 24px;
+  cursor: pointer;
+  font-size: 18px;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.Soft {
+  border-radius: 12px;
+}
+
+.Large {
+  padding: 18px 32px;
+}
+
+.Primary {
+  background: #bada55;
+  color: darken(#bada55, 25%);
+  border: 1px solid darken(#bada55, 25%);
+}
+
+.Secondary {
+  background: yellow;
+  color: black;
+}
