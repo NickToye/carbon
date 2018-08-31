@@ -1,0 +1,37 @@
+// Utilities :: Spacings
+
+$carbon-spacing-directions: (
+  null: null,
+  '-top': '-top',
+  '-right': '-right',
+  '-bottom': '-bottom',
+  '-left': '-left',
+  '-horizontal': '-left' '-right',
+  '-vertical': '-top' '-bottom'
+) !default;
+
+$carbon-spacing-properties: (
+  'padding': 'padding',
+  'margin': 'margin'
+) !default;
+
+$carbon-spacing-sizes: (
+  null: $carbon-global-spacing-unit,
+  '-tiny': $carbon-global-spacing-unit-tiny,
+  '-small': $carbon-global-spacing-unit-small,
+  '-large': $carbon-global-spacing-unit-large,
+  '-huge': $carbon-global-spacing-unit-huge,
+  '-none': 0
+) !default;
+
+@each $property-namespace, $property in $carbon-spacing-properties {
+  @each $direction-namespace, $direction-rules in $carbon-spacing-directions {
+    @each $size-namespace, $size in $carbon-spacing-sizes {
+      [class~="u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}"] {
+        @each $direction in $direction-rules {
+          #{$property}#{$direction}: $size !important;
+        }
+      }
+    }
+  }
+}

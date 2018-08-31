@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { mount } from 'enzyme';
+// import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import Button from './Button';

@@ -2,6 +2,6 @@
 
 exports[`<Button /> render() renders the component 1`] = `
 <button
-  className="Button"
+  className="Button c-btn"
 />
 `;

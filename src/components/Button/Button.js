@@ -11,14 +11,15 @@ class Button extends React.Component {
   render() {
     const cx = classNames.bind(styles),
           size = this.props.size,
-          fizz = this.props.fizz,
+          type = this.props.type,
           btnClass = cx(
             size,
-            fizz, 
+            type, 
             {
               Button: true,
               Soft: this.props.soft,
-            }
+            },
+            `c-btn`
           );
     
     return (

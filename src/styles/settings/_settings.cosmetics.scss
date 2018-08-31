@@ -1,0 +1,85 @@
+// Settings :: Cosmetics
+
+
+
+$carbon-colors: (
+  'primary': #6ac3f3,
+  'secondary1': #de5e35,
+  'secondary2': #ffb12f,
+  'secondary3': #88aa4f,
+  'black': #000,
+  'white': #fff,
+  'pale-grey': #f7f7f7,
+  'light-grey': #e5e5e5,
+  'grey': #6d6d6d,
+  'medium-grey': #3f3f3f,
+  'dark-grey': #202020,
+  'positive': #59b25a,
+  'caution': #ffc107,
+  'negative': #c74441,
+  'info': #357aba
+);
+
+
+
+$carbon-color-interval: 10% !global;
+$carbon-mix-levels: 5;
+
+$carbon-tones: (
+  10, 20, 30, 40, 50
+);
+
+// Sizes
+$carbon-font-size-h1: 36px !default;
+$carbon-font-size-h2: 28px !default;
+$carbon-font-size-h3: 24px !default;
+$carbon-font-size-h4: 20px !default;
+$carbon-font-size-h5: 18px !default;
+$carbon-font-size-h6: 16px !default;
+$carbon-font-size-small: 14px !default;
+$carbon-font-size-tiny: 12px !default;
+
+$carbon-sizes: (
+  'tiny': ($carbon-global-spacing-unit-tiny, $carbon-font-size-tiny),
+  'small': ($carbon-global-spacing-unit-small, $carbon-font-size-small),
+  'large': ($carbon-global-spacing-unit-large, $carbon-font-size-h2),
+  'huge': ($carbon-global-spacing-unit-huge, $carbon-font-size-h1),
+  'standard': ($carbon-global-spacing-unit, $carbon-global-font-size)
+);
+
+
+// Surfaces
+$carbon-surfaces: (
+  '0': 'none',
+  '1': '0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)',
+  '2': '0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)',
+  '3': '0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)',
+  '4': '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)',
+  '5': '0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22)'
+);
+
+
+// Typography
+// Variables
+$carbon-face: Roboto, Helvetica, sans-serif;
+$carbon-bold: 500;
+$carbon-regular: 400;
+$carbon-light: 300;
+
+// Maps
+$types: (
+  h1: (36px, $carbon-face, $carbon-bold),
+  h2: (28px, $carbon-face, $carbon-light),
+  h3: (24px, $carbon-face, $carbon-light),
+  h4: (18px, $carbon-face, $carbon-light),
+  p: (16px, $carbon-face, $carbon-regular),
+  li: (16px, $carbon-face, $carbon-regular),
+  small: (13px, $carbon-face, $carbon-regular),
+);
+
+// $typeface: (
+//   'light': $carbon-face-light,
+//   'regular': $carbon-face-regular,
+//   'medium': $carbon-face-medium,
+//   'bold': $carbon-face-bold,
+// );

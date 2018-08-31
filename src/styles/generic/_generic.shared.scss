@@ -1,0 +1,43 @@
+// Generic :: Shared
+
+// Always declare margins in the same direction:
+// csswizardry.com/2012/06/single-direction-margin-declarations
+
+// TODO Move this code only css
+// @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+address,
+h1,
+.u-h1,
+h2,
+.u-h2,
+h3,
+.u-h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+.u-p,
+pre,
+dl,
+ol,
+ul,
+figure,
+hr,
+table,
+fieldset {
+  margin-bottom: $carbon-global-spacing-unit;
+}
+
+// Consistent indentation for lists.
+dd,
+ol,
+ul {
+  margin-left: $carbon-global-spacing-unit;
+}

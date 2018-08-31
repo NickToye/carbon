@@ -1,0 +1,10 @@
+// Objects :: List Inline 
+
+[class*='o-list-inline'] {
+  margin-left: 0;
+  list-style: none;
+}
+
+[class*='o-list-inline__item'] {
+  display: inline-block;
+}
