@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from './Header';
-// import Main from './Main';
+import PropTypes from 'prop-types';
+// import { ConnectedRouter } from 'connected-react-router';
+// import routes from '../../routes';
+import Main from './Main';
 // import logo from '../../logo.svg';
 // import styles from './App.scss';
 
@@ -54,10 +57,17 @@ import Header from './Header';
 // 
 // export default App;
 
-const App = () => (
-  <div>
-    <Header />
-  </div>
-)
+const App = ({ history }) => {
+  return (
+    <div>
+      <Header />
+      <Main />
+    </div>
+  )
+}
+
+App.propTypes = {
+  history: PropTypes.object
+}
 
 export default App;

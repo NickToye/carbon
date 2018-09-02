@@ -1,0 +1,22 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Standardise some UI treatments.
+
+$carbon-global-radius: 6px !default;
+$carbon-global-radius-small: 3px !default;
+
+$carbon-global-speed: 500ms;
+$carbon-global-speed-rapid: 250ms;
+$carbon-global-speed-lightening: 125ms;
+$carbon-global-speed-tortoise: 2000ms;
+
+$carbon-global-transition: all $carbon-global-speed ease-in-out !default;
+
+$carbon-global-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+$carbon-global-width: 1600px !default;
+$carbon-global-range-handle: 18px !default;

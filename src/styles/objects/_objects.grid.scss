@@ -1,0 +1,26 @@
+// Objects :: Grid
+
+[class~='o-grid'] {
+  display: grid;
+  grid-gap: $carbon-global-spacing-unit;
+  grid-template-columns: repeat(4, auto);
+}
+
+[class~='o-grid__el'] {
+  @include border-radius($carbon-global-radius);
+  display: flex;
+  min-height: 100px;
+}
+
+[class~='o-grid--auto2'] {
+  grid-template-columns: repeat(2, auto);
+}
+
+[class~='o-grid--start'] div {
+  align-items: flex-start;
+}
+
+[class~='o-grid--centre'] div {
+  align-items: center;
+  justify-content: center;
+}

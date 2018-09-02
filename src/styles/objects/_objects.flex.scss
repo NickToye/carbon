@@ -1,0 +1,44 @@
+// Objects :: Flex
+
+[class~='o-flex'] {
+  align-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+[class~='o-flex--start'] {
+  justify-content: flex-start;
+}
+
+[class~='o-flex--justify-between'] {
+  justify-content: space-between;
+}
+
+[class~='o-flex--justify-center'] {
+  justify-content: center;
+}
+
+[class~='o-flex--align-center'] {
+  align-items: center;
+}
+
+[class~='o-flex--center'] {
+  align-items: center;
+  justify-content: center;
+}
+
+[class~='o-flex--row'] {
+  flex-direction: row;
+}
+
+[class~='o-flex--wrap'] {
+  flex-wrap: wrap;
+}
+
+[class~='o-flex__item'] {
+  flex: 1;
+}
+
+[class~='o-flex__item-auto'] {
+  flex: auto;
+}

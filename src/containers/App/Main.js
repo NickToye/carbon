@@ -1,7 +1,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-
+import Home from './Home';
+import Atoms from './Atoms';
+import Molecules from './Molecules';
+import Organisms from './Organisms';
+import Templates from './Templates';
+import Pages from './Pages';
 
 const Main = () => (
   <div className="u-padding">

@@ -1,0 +1,7 @@
+// Tools :: Dimensions
+
+// Size @include carbon-size(100px);
+@mixin carbon-size($width, $height: $width) {
+  height: $height;
+  width: $width;
+}

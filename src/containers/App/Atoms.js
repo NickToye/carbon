@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ColourIndex from '../../components/Colour/Index';
+import ColourIndex from '../../components/Colour/ColoursCard';
 import FontIndex from '../../components/Font/Index';
 import AnimationIndex from '../../components/Animation/Index';
 import ButtonIndex from '../../components/Button/Index';

@@ -3,12 +3,18 @@
 // Settings 
 @import 'settings/settings.core';
 @import 'settings/settings.cosmetics';
+@import 'settings/settings.global';
 
 
 
 
 
 // Tools
+@import 'tools/tools.border-radius';
+@import 'tools/tools.colours';
+@import 'tools/tools.contraster-lookup';
+@import 'tools/tools.cosmetics';
+@import 'tools/tools.dimensions';
 @import 'tools/tools.typesetting';
 
 
@@ -23,13 +29,19 @@
 
 
 // Objects
+@import 'objects/objects.flex';
+@import 'objects/objects.grid';
 @import 'objects/objects.list-inline';
+@import 'objects/objects.surfaces';
+@import 'objects/objects.swatches';
 
 
 
 
 
 // Utilities
+@import 'utilities/utilities.colours';
+@import 'utilities/utilities.helpers';
 @import 'utilities/utilities.spacings';
 @import 'utilities/utilities.typography';
 

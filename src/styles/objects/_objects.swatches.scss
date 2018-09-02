@@ -1,0 +1,55 @@
+// Objects :: Swatches
+
+[class~='o-swatch'] {
+  align-content: flex-start;
+  height: 150px;
+  position: relative;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    align-items: center;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 64px;
+    padding: 12px 24px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &:before {
+    @include carbon-font-size(14px);
+    align-items: flex-start;
+
+  }
+
+  &:after {
+    @include carbon-font-size(11px);
+    align-items: flex-end;
+  }
+}
+
+[class~='o-swatch__tones'] {
+  @include border-radius($carbon-global-radius bottom);
+  margin: 0 auto;
+  width: 98%;
+}
+
+[class~='o-swatch__tone'] {
+  @include carbon-font-size(11px);
+  padding: 12px 24px;
+  position: relative;
+  width: 100%;
+
+  &:after {
+    position: absolute;
+    right: 24px;
+    text-transform: uppercase;
+  }
+
+  &:last-child {
+    @include border-radius($carbon-global-radius bottom);
+  }
+}

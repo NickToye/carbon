@@ -1,0 +1,117 @@
+// Utilities :: Colours
+
+@each $carbon-key, $carbon-value in $carbon-colors {
+
+  $gradient-dark: darken($carbon-value, 15%);
+
+  [class~="u-carbon-#{$carbon-key}-bg"] {
+    background-color: $carbon-value;
+    color: carbon-choose-contrast-color($carbon-value);
+
+    &[class~='o-swatch']:before {
+      content: '#{$carbon-key}';
+      text-transform: capitalize;
+    }
+    
+    &[class~='o-swatch']:after {
+      content: '#{$carbon-value}';
+    }
+    
+    
+
+    @each $tone-key in $carbon-tones {
+      $tint: carbon-get-tint($carbon-value, $tone-key);
+      $shade: carbon-get-shade($carbon-value, $tone-key);
+
+      [class*='--tint-#{$tone-key}'] {
+        background-color: $tint;
+        color: carbon-choose-contrast-color($tint);
+        &.o-swatch__tone {
+          &:before {
+            content: 'Lighten #{$tone-key}%';
+            color: carbon-choose-contrast-color($tint);
+          }
+          &:after {
+            content: '#{$tint}';
+            color: carbon-choose-contrast-color($tint);
+          }
+        }
+      }
+      &--shade-#{$tone-key} {
+        background-color: $shade;
+        color: carbon-choose-contrast-color($shade);
+        &.o-swatch__tone {
+          &:before {
+            content: 'Darken #{$tone-key}%';
+          }
+          &:after {
+            content: '#{$shade}';
+          }
+        }
+      }
+    }
+
+
+    // .c-btn--ghost {
+    //   color: carbon-color-contrast($carbon-value);
+    // }
+  }
+  
+  
+  
+  
+
+
+  [class~="u-carbon-#{$carbon-key}-gradient"] {
+    @include carbon-linear-gradient(to right, $carbon-value, $gradient-dark);
+    color: carbon-choose-contrast-color($carbon-value);
+
+    &[class~='o-swatch']:before {
+      content: '#{$carbon-key} linear gradient';
+      text-transform: capitalize;
+    }
+    
+    &[class~='o-swatch']:after {
+      content: '#{$carbon-value} to #{$gradient-dark}';
+      bottom: 0;
+      top: auto;
+    }
+  }
+  
+  [class~='u-carbon-#{$carbon-key}-colour'] {
+    color: $carbon-value !important;
+  }
+
+  // @for $i from 1 through $carbon-mix-levels {
+  //   $name: carbon-color-level('#{$carbon-key}', $i);
+  //
+  //
+  //   .u-carbon-#{$carbon-key}-l#{$i}-bg {
+  //     background: carbon-color-level('#{$carbon-key}', $i);
+  //     color: carbon-color-contrast($carbon-value);
+  //     border: $name;
+  //
+  //     &:before {
+  //       content: 'Light #{$i}';
+  //     }
+  //
+  //     &:after {
+  //       content: '#{$name}';
+  //     }
+  //   }
+  //
+  //   .u-carbon-#{$carbon-key}-d#{$i}-bg {
+  //     background: carbon-color-level('#{$carbon-key}', -$i);
+  //     color: carbon-color-contrast($carbon-value, 40);
+  //     // @include carbon-contrast($carbon-value);
+  //
+  //     &:before {
+  //       content: 'Dark #{$i}';
+  //     }
+  //
+  //     &:after {
+  //       content: '#{$name}';
+  //     }
+  //   }
+  // }
+}

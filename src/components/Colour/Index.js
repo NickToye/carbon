@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ColourList from './ColourList';
+import ColoursCard from './ColoursCard';
 
 class ColourIndex extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class ColourIndex extends React.Component {
           <h2 className="u-margin-none">Colours</h2>
           <p>The colour palette contains Brand, Neutral and Utility colours used throughout the design system.</p>
         </header>
-        <ColourList />
+        <ColoursCard />
       </section>
     );
   }
