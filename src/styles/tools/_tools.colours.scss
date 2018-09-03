@@ -1,7 +1,10 @@
 // Tools :: Colours
 
 @function carbon-color($key: 'primary') {
-  @return map-get($carbon-colors, $key);
+  @if map-has-key($carbon-colors, $key) {
+    @return map-get($carbon-colors, $key);
+  }
+  @error "Invalid color name: `#{$key}`.";
 }
 
 $carbon-color-dark: carbon-color(dark-grey);

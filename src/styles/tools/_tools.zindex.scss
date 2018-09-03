@@ -1,0 +1,29 @@
+// Tools :: Z-Index 
+
+// Function 
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property ommitted.";
+  }
+  @return map-get($z-layers, $layer);
+}
+
+
+
+
+
+// Map
+$z-layers: (
+  "heaven": 5001,
+  "modal": 3,
+  "sticky": 2,
+  "default": 1,
+  "underground": -1,
+  "hell": -5001
+);
+
+
+
+
+
+// eg .modal { z-index: z("modal"); }  returns z-index: 3;

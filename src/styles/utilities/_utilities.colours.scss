@@ -16,52 +16,20 @@
     &[class~='o-swatch']:after {
       content: '#{$carbon-value}';
     }
-    
-    
 
-    @each $tone-key in $carbon-tones {
-      $tint: carbon-get-tint($carbon-value, $tone-key);
-      $shade: carbon-get-shade($carbon-value, $tone-key);
-
-      [class*='--tint-#{$tone-key}'] {
-        background-color: $tint;
-        color: carbon-choose-contrast-color($tint);
-        &.o-swatch__tone {
-          &:before {
-            content: 'Lighten #{$tone-key}%';
-            color: carbon-choose-contrast-color($tint);
-          }
-          &:after {
-            content: '#{$tint}';
-            color: carbon-choose-contrast-color($tint);
-          }
-        }
-      }
-      &--shade-#{$tone-key} {
-        background-color: $shade;
-        color: carbon-choose-contrast-color($shade);
-        &.o-swatch__tone {
-          &:before {
-            content: 'Darken #{$tone-key}%';
-          }
-          &:after {
-            content: '#{$shade}';
-          }
-        }
-      }
-    }
-
-
-    // .c-btn--ghost {
-    //   color: carbon-color-contrast($carbon-value);
-    // }
   }
   
+  @for $i from 1 through $carbon-tones {
+    $variant: $i * 5%;
+    [class~="u-carbon-#{$carbon-key}-bg--tint-#{$i}0"] {
+      background-color: lighten($carbon-value, $variant); 
+    }
+    
+    [class~="u-carbon-#{$carbon-key}-bg--shade-#{$i}0"] {
+      background-color: darken($carbon-value, $variant); 
+    }
+  }
   
-  
-  
-
-
   [class~="u-carbon-#{$carbon-key}-gradient"] {
     @include carbon-linear-gradient(to right, $carbon-value, $gradient-dark);
     color: carbon-choose-contrast-color($carbon-value);
@@ -82,36 +50,10 @@
     color: $carbon-value !important;
   }
 
-  // @for $i from 1 through $carbon-mix-levels {
-  //   $name: carbon-color-level('#{$carbon-key}', $i);
-  //
-  //
-  //   .u-carbon-#{$carbon-key}-l#{$i}-bg {
-  //     background: carbon-color-level('#{$carbon-key}', $i);
-  //     color: carbon-color-contrast($carbon-value);
-  //     border: $name;
-  //
-  //     &:before {
-  //       content: 'Light #{$i}';
-  //     }
-  //
-  //     &:after {
-  //       content: '#{$name}';
-  //     }
-  //   }
-  //
-  //   .u-carbon-#{$carbon-key}-d#{$i}-bg {
-  //     background: carbon-color-level('#{$carbon-key}', -$i);
-  //     color: carbon-color-contrast($carbon-value, 40);
-  //     // @include carbon-contrast($carbon-value);
-  //
-  //     &:before {
-  //       content: 'Dark #{$i}';
-  //     }
-  //
-  //     &:after {
-  //       content: '#{$name}';
-  //     }
-  //   }
-  // }
 }
+
+// Can also call colours like below:
+//
+// .element {
+//   color: carbon-color(primary);
+// }

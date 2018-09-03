@@ -4,11 +4,11 @@
   align-content: flex-start;
   height: 150px;
   position: relative;
-  z-index: 1;
-
+  
   &:before,
   &:after {
     align-items: center;
+    box-sizing: border-box;
     top: 0;
     left: 0;
     display: flex;
