@@ -1,0 +1,86 @@
+// Objects :: Swatches
+
+[class~='o-swatch'] {
+  align-content: flex-start;
+  height: 150px;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  
+  &:before,
+  &:after {
+    align-items: center;
+    box-sizing: border-box;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    height: auto;
+    // padding: 12px;
+    position: absolute;
+    text-transform: uppercase;
+    width: auto;
+  }
+
+  &:before {
+    // @include carbon-font-size(14px);
+    align-items: flex-start;
+    font-size: 14px;
+  }
+
+  &:after {
+    // @include carbon-font-size(11px);
+    align-items: flex-end;
+    font-size: 11px;
+  }
+  
+  
+}
+
+[class~='o-swatch__title'] {
+  // position: absolute;
+  // top: 12px;
+  // left: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+[class~='o-swatch__code'] {
+  // position: absolute;
+  // bottom: 12px;
+  // left: 12px;
+  font-size: 12px;
+}
+
+[class~='o-swatch__tones'] {
+  // @include border-radius($carbon-global-radius bottom);
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: 0 auto;
+  // width: 98%;
+}
+
+[class~='o-swatch__tone'] {
+  // @include carbon-font-size(11px);
+  font-size: 11px;
+  padding: 12px 24px;
+  position: relative;
+  width: 100%;
+
+  &:after {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    text-transform: uppercase;
+  }
+  
+  
+
+  &:last-child {
+    // @include border-radius($carbon-global-radius bottom);
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+}

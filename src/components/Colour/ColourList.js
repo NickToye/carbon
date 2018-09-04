@@ -6,7 +6,7 @@ const ColourList = ({ colours, palette }) => {
   return (
     <div>
       <h2 className="u-text-capitalise">{palette}</h2>
-      <div className="o-grid  o-grid--centre  o-grid--start u-margin-bottom-huge">
+      <div className="o-grid  o-grid--start u-margin-bottom-huge">
         {Object.keys(colours)
           .filter(function(filteredPalette) {
             return colours[filteredPalette].type === palette;

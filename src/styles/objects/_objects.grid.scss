@@ -7,7 +7,7 @@
 }
 
 [class~='o-grid__el'] {
-  @include border-radius($carbon-global-radius);
+  // @include border-radius($carbon-global-radius);
   display: flex;
   min-height: 100px;
 }
