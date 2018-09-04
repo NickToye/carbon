@@ -9,6 +9,10 @@
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
   
+  &[class*='gradient'] {
+    border-radius: 6px;
+  }
+  
   &:before,
   &:after {
     align-items: center;

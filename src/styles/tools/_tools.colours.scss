@@ -53,13 +53,13 @@ $carbon-color-light: carbon-color('white');
 }
 
 @function carbon-choose-contrast-color($color) {
-  $lightContrast: carbon-contrast($color, carbon-color('white'));
-  $darkContrast: carbon-contrast($color, carbon-color('black'));
+  $lightContrast: carbon-contrast($color, white);
+  $darkContrast: carbon-contrast($color, black);
 
   @if ($lightContrast > $darkContrast) {
-    @return carbon-color('white');
+    @return white;
   }
   @else {
-    @return carbon-color('dark-grey');
+    @return black;
   }
 }
