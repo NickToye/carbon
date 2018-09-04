@@ -10,6 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 // import rootReducer from './reducers';
 
 import { loadColours, loadTones } from './actions/colourActions';
+import { loadTypography, loadTypefaces } from './actions/typographyActions';
 
 import './styles/index.scss';
 import App from './containers/App/App';
@@ -23,6 +24,8 @@ const store = configureStore();
 
 store.dispatch(loadColours());
 store.dispatch(loadTones());
+store.dispatch(loadTypography());
+store.dispatch(loadTypefaces());
 
 render(
   <Provider store={store}>

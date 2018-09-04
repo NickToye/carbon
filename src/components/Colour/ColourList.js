@@ -5,7 +5,7 @@ import Palette from './Palette';
 const ColourList = ({ colours, palette }) => {
   return (
     <div>
-      <h2 className="u-text-capitalise">{palette}</h2>
+      <h3 className="u-text-capitalise">{palette}</h3>
       <div className="o-grid  o-grid--start u-margin-bottom-huge">
         {Object.keys(colours)
           .filter(function(filteredPalette) {

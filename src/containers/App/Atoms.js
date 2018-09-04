@@ -6,7 +6,7 @@ import AnimationIndex from '../../components/Animation/Index';
 import ButtonIndex from '../../components/Button/Index';
 import FormControlIndex from '../../components/FormControl/Index';
 import ImageIndex from '../../components/Image/Index';
-import TypographyIndex from '../../components/Typography/Index';
+import TypographyIndex from '../../components/Typography/TypographyCard';
 
 const Atoms = () => (
   <div>    

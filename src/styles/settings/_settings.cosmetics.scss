@@ -59,25 +59,31 @@ $carbon-surfaces: (
 
 // Typography
 // Variables
-$carbon-face: Roboto, Helvetica, sans-serif;
-$carbon-bold: 500;
-$carbon-regular: 400;
-$carbon-light: 300;
+$carbon-face-thin: 'FS-Emeric-Thin', Helvetica, sans-serif;
+$carbon-face-light: 'FS-Emeric-Light', Helvetica, sans-serif;
+$carbon-face-medium: 'FS-Emeric-Medium', Helvetica, sans-serif;
+$carbon-face-regular: 'FS-Emeric-Regular', Helvetica, sans-serif;
+$carbon-face-bold: 'FS-Emeric-Bold', Helvetica, sans-serif;
+$carbon-face-book: 'FS-Emeric-Book', Helvetica, sans-serif;
+$carbon-face-core: 'FS-Emeric-Core', Helvetica, sans-serif;
 
 // Maps
 $types: (
-  h1: (36px, $carbon-face, $carbon-bold),
-  h2: (28px, $carbon-face, $carbon-light),
-  h3: (24px, $carbon-face, $carbon-light),
-  h4: (18px, $carbon-face, $carbon-light),
-  p: (16px, $carbon-face, $carbon-regular),
-  li: (16px, $carbon-face, $carbon-regular),
-  small: (13px, $carbon-face, $carbon-regular),
+  h1: (36px, $carbon-face-light),
+  h2: (28px, $carbon-face-light),
+  h3: (24px, $carbon-face-light),
+  h4: (18px, $carbon-face-light),
+  p: (16px, $carbon-face-regular),
+  li: (16px, $carbon-face-regular),
+  small: (13px, $carbon-face-core),
 );
 
-// $typeface: (
-//   'light': $carbon-face-light,
-//   'regular': $carbon-face-regular,
-//   'medium': $carbon-face-medium,
-//   'bold': $carbon-face-bold,
-// );
+$typeface: (
+'light': $carbon-face-light,
+'book': $carbon-face-book,
+'medium': $carbon-face-medium,
+'regular': $carbon-face-regular,
+'core': $carbon-face-core,
+'thin': $carbon-face-thin,
+'bold': $carbon-face-bold,
+);

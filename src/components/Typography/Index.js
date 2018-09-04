@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Button from './Button';
+import TypographyCard from './TypographyCard';
 
 
 class TypographyIndex extends React.Component {
@@ -17,6 +17,7 @@ class TypographyIndex extends React.Component {
           <h2 className="u-margin-none">Typography</h2>
           <p>All the typographical elements used throughout the design system.</p>
         </header>
+        <TypographyCard />
       </section>
     );
   }

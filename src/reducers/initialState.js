@@ -1,6 +1,6 @@
 export default {
   colours: [],
   tones: [],
-  // typography: [],
-  // typefaces: [],
+  typography: [],
+  typefaces: [],
 };

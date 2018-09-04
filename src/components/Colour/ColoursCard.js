@@ -21,7 +21,7 @@ export class ColoursCard extends React.Component {
     return (
       <div className="u-relative">
         <header>
-          <h1 className="testing">Colours</h1>
+          <h2 className="u-margin-none">Colours</h2>
           <p>A tool that will display the correct colours.</p>
         </header>
 

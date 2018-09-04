@@ -5,12 +5,11 @@
   [class~="u-#{$type}"] {
     @include carbon-font-size(nth($values, 1));
     font-family: nth($values, 2);
-    font-weight: nth($values, 3);
   }
 }
 
-// @each $face, $value in $typeface {
-//   .u-alchemy-face-#{$face} {
-//     font-family: $value;
-//   }
-// }
+@each $face, $value in $typeface {
+  [class~='u-carbon-face-#{$face}'] {
+    font-family: $value;
+  }
+}
