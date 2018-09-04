@@ -28,16 +28,18 @@
       color: carbon-choose-contrast-color($carbon-value);
     }
     
-    [class~="u-carbon-#{$carbon-key}-bg--tint-#{$i}0"]:after {
-        content: '#{$carbon-tint}';
+    
+    [class*='o-swatch'][class~="u-carbon-#{$carbon-key}-bg--tint-#{$i}0"]:after {
+      content: '#{$carbon-tint}';
     }
     
+        
     [class~="u-carbon-#{$carbon-key}-bg--shade-#{$i}0"] {
       background-color: $carbon-shade; 
       color: carbon-choose-contrast-color($carbon-value);
     }
     
-    [class~="u-carbon-#{$carbon-key}-bg--shade-#{$i}0"]:after {
+    [class*='o-swatch'][class~="u-carbon-#{$carbon-key}-bg--shade-#{$i}0"]:after {
         content: '#{$carbon-shade}';
     }
   }
@@ -45,11 +47,6 @@
   [class~="u-carbon-#{$carbon-key}-gradient"] {
     @include carbon-linear-gradient(to right, $carbon-value, $gradient-dark);
     color: carbon-choose-contrast-color($carbon-value);
-
-    // &[class~='o-swatch']:before {
-    //   content: '#{$carbon-key} linear gradient';
-    //   text-transform: capitalize;
-    // }
     
     &[class~='o-swatch']:after {
       content: '#{$carbon-value} to #{$gradient-dark}';
@@ -62,6 +59,8 @@
   }
 
 }
+
+
 
 // Can also call colours like below:
 //

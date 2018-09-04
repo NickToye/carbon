@@ -25,7 +25,7 @@ export class ColoursCard extends React.Component {
           <p>A tool that will display the correct colours.</p>
         </header>
 
-        <section className="u-carbon-pale-grey-bg--tint-50">
+        <section>
           <ColourList colours={colours} palette={this.state.palette[0]} />
           <ColourList colours={colours} palette={this.state.palette[1]} />
           <ColourList colours={colours} palette={this.state.palette[2]} />
